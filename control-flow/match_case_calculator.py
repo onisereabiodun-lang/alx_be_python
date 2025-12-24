@@ -1,22 +1,19 @@
 num1 = float(input("Enter the first number: "))
-num2 = float(input("Enter the scond number: "))
+num2 = input("Enter the second number: ")
+num2 = float(num2)
 operation = input("Choose the operation (+, -, *, /): ")
+
 match operation:
     case "+":
-        result = num1 + num2
-        print(f"The result is {result}.")
+        print(f"The result is {num1 + num2}.")
     case "-":
-        result = num1 - num2
-        print(f"The result is result {result}.")
+        print(f"The result is {num1 - num2}.")
     case "*":
-        result = num1 * num2
-        print(f"The result is result {result}.")
+        print(f"The result is {num1 * num2}.")
     case "/":
         if num2 == 0:
             print("Cannot divide by zero.")
         else:
-            result = num1 / num2
-            print(f"The result is {result}.")
+            print(f"The result is {num1 / num2}.")
     case _:
         print("Invalid operation.")
-                               
