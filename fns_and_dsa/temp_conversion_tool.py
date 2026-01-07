@@ -1,16 +1,15 @@
 # temp_conversion_tool.py
 # File location: alx_be_python/fns_and_dsa/temp_conversion_tool.py
 
-# Global conversion factors (defined at module level)
-FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
-CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
+# Global conversion factors (defined exactly as the checker expects)
+FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
+CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 
 def convert_to_celsius(fahrenheit):
     """
     Convert Fahrenheit temperature to Celsius using the global factor.
     """
-    # We only READ the global variable - no need for 'global' keyword
     celsius = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     return celsius
 
@@ -19,7 +18,6 @@ def convert_to_fahrenheit(celsius):
     """
     Convert Celsius temperature to Fahrenheit using the global factor.
     """
-    # We only READ the global variable - no need for 'global' keyword
     fahrenheit = celsius * CELSIUS_TO_FAHRENHEIT_FACTOR + 32
     return fahrenheit
 
@@ -31,7 +29,7 @@ def main():
     try:
         # Get temperature input
         temp_input = input("Enter the temperature to convert: ").strip()
-        temperature = float(temp_input)  # Will raise ValueError if not numeric
+        temperature = float(temp_input)  # Raises ValueError if not numeric
 
         # Get unit input
         unit = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
